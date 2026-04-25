@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra de producto</title>
+  <style>
+    body {
+      background-image: url('https://plus.unsplash.com/premium_photo-1675435646793-f6ceb239b064?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870');
+  background-size: cover;        /* Hace que la imagen cubra toda la pantalla */
+  background-position: center;   /* Centra la imagen */
+  background-repeat: no-repeat;  /* Evita que se repita */
+  background-attachment: fixed;  /* Hace que quede fija al hacer scroll */
+  font-family: Arial, sans-serif;
+  color: #3e2723;
+  margin: 0;
+  padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 100px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    h1 {
+      color: #3e2723;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    input, select, button {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #3e2723;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #5d4037;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #3e2723;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Compra simulada</h1>
+    <p>Completá los datos para simular tu compra ☕</p>
+
+    <form action="confirmacion.html" method="get">
+      <label>Nombre completo:</label>
+      <input type="text" name="nombre" required>
+
+      <label>Correo electrónico:</label>
+      <input type="email" name="email" required>
+
+      <label>Producto seleccionado:</label>
+      <select name="producto" required>
+        <option value="expresso">Expresso Caramelo</option>
+        <option value="latte">Latte de Canela</option>
+        <option value="mocaccino">Mocaccino</option>
+        
+      </select>
+
+      <label>Cantidad:</label>
+      <input type="number" name="cantidad" min="1" value="1" required>
+
+      <button type="submit">Finalizar compra</button>
+    </form>
+
+    <a href="index.html">← Volver al menú</a>
+  </div>
+</body>
+</html>

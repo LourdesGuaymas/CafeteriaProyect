@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <title>Document</title>
+
+</head>
+<body>
+  
+
+ 
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style=" background: linear-gradient(to bottom, rgba(0, 0, 0, 0.993), rgba(0,0,0,0.3), transparent);" >
+  <div class="container-fluid">
+    
+    <!-- Logo -->
+ <a class="navbar-brand fw-bold" href="index.html">
+  <img src="imagenes/logo2.jpg" alt="Logo" class="logo-navbar">
+</a>
+
+
+    <!-- Botón responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+ <!-- Links -->
+<div class="collapse navbar-collapse" id="navbarNav">
+
+  <!-- Menú centrado -->
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item mx-3">
+      <a class="nav-link active fw-bold" aria-current="page" href="index.html">Inicio</a>
+    </li>
+
+    <li class="nav-item dropdown mx-3">
+      <a class="nav-link fw-bold dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Bebidas
+      </a>
+      <ul class="dropdown-menu dropdown-menu-brown">
+        <li><a class="dropdown-item" href="bebidasFrias.html">Bebidas Frías</a></li>
+        <li><a class="dropdown-item" href="bebidasCalientes.html">Bebidas Calientes</a></li>
+      </ul>
+    </li>
+
+   
+      <li class="nav-item mx-3">
+      <a class="nav-link fw-bold" aria-current="page" href="Acompañamientos.html">Acompañamientos</a>
+    </li>
+
+    <li class="nav-item mx-3">
+      <a class="nav-link fw-bold" href="nosotros.html">Nosotros</a>
+    </li>
+   
+  </ul>
+
+  <!-- Botón login a la derecha -->
+<a href="#" onclick="logout()" class="btn-login ms-lg-3">Logout</a>
+</div>
+
+  </div>
+</nav>
+
+
+
+<div class="ImagenHome">
+  <img src="imagenes/imagentop.jpg" alt="Imagen de fondo" style="width: 100%; height: 100vh; object-fit: cover;">
+  <div class="texto-encima">
+    <h1>El aroma que despierta tus sentidos ☕</h1>
+    <p>Comenzá tu día con el sabor auténtico del mejor café artesanal.  
+    Hecho con granos seleccionados y amor en cada taza.  
+    Pedilo ahora y sentí el placer del buen café en casa.</p>
+    <a href="bebidasCalientes.html" class="btn-marron">Quiero mi café</a>
+  </div>
+</div>
+  
+ <section class="historia">
+  <div class="contenedor-historia">
+    <div class="texto-historia">
+      <h2>Nuestra Historia</h2>
+      <p>
+        Todo comenzó con una simple pasión: el amor por el buen café.  
+        En nuestro pequeño local, tostábamos granos a mano y servíamos cada taza con dedicación.  
+        Con el tiempo, esa pasión creció, y hoy llevamos ese mismo aroma y sabor  
+        directamente a tu hogar.  
+      </p>
+      <p>
+        Creemos que una buena taza de café puede cambiar tu día,  
+        y por eso seleccionamos granos de calidad, de origen sustentable,  
+        para ofrecerte una experiencia única en cada sorbo.
+      </p>
+    </div>
+
+    <div class="imagen-historia">
+      <img src="https://images.unsplash.com/photo-1613336027492-8743a1becef3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470" alt="Nuestra historia del café">
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="contenido">
+      <h1>Café entregado<br>en tu puerta.</h1>
+      <p>Únete a nuestro Club del Café y recibe tus mezclas favoritas en tu casa según tu horario.  
+         Puedes elegir entregas semanales, quincenales o mensuales.</p>
+      <a href="bebidasCalientes.html" class="btn btn-marron">Comprar ahora</a>
+    </div>
+  </section>
+<h2 class="titulo-seccion" style="font-size: 2rem; margin-top: 20px; color: #5a3825; font-weight: bold; text-align: center;">Promos</h2>
+
+<div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+
+    <!-- SLIDE 1 -->
+    <div class="carousel-item active" style="padding: 50px;">
+      <div class="d-flex justify-content-center">
+        <div class="card mx-2" style="width: 10rem;">
+          <a href="promo.html?promo=promo1"><img src="imagenes/promo1.jpg" class="card-img-top" style="height: 30vh;" alt="Promo 1"></a>
+        </div>
+        <div class="card mx-2" style="width: 10rem;">
+          <a href="promo.html?promo=promo2"><img src="imagenes/promo2.jpg" class="card-img-top" style="height: 30vh;" alt="Promo 2"></a>
+        </div>
+        <div class="card mx-2" style="width: 10rem;">
+          <a href="promo.html?promo=tostado"><img src="imagenes/2x1tostado.jpg" class="card-img-top" style="height: 30vh;" alt="Tostado 2x1"></a>
+        </div>
+        <div class="card mx-2" style="width: 10rem;">
+          <a href="promo.html?promo=promo3"><img src="imagenes/promo3.jpg" class="card-img-top" style="height: 30vh;" alt="Promo 3"></a>
+        </div>
+        <div class="card mx-2" style="width: 10rem;">
+          <a href="promo.html?promo=latte"><img src="imagenes/2x1latte.jpg" class="card-img-top" style="height: 30vh;" alt="Latte 2x1"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  
+
+<style>
+  .logo-navbar {
+  width: 60px;           /* Tamaño pequeño */
+  height: 60px;          /* Mantiene proporción cuadrada */
+  border-radius: 50%;    /* Hace que sea totalmente redondo */
+  object-fit: cover;     /* Ajusta la imagen dentro del círculo */
+  border: 2px solid #5a3825; /* Opcional: borde color café */
+}
+
+  .ImagenHome {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.ImagenHome img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(70%); /* oscurece un poco la imagen para resaltar el texto */
+}
+
+.texto-encima {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 550px;
+}
+
+.texto-encima h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #f4e1c1; /* tono cálido tipo café */
+  margin-bottom: 20px;
+}
+
+.texto-encima p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  color: #f9f9f9;
+}
+
+.btn-marron {
+  background-color: #8B4513;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.btn-marron:hover {
+  background-color: #A0522D;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+     .hero {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      background-image: url('imagenes/imagenpedidos.jpg'); /* 👈 Cambia por el nombre de tu imagen */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      padding-left: 5%;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45); /* Oscurece un poco para que se lea el texto */
+    }
+
+    .contenido {
+      position: relative;
+      max-width: 600px;
+      z-index: 2;
+    }
+
+    .contenido h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #f4e1c1; /* tono cálido tipo café */
+    }
+
+    .contenido p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #f8f8f8;
+      margin-bottom: 30px;
+    }
+
+    .btn-marron {
+      background-color: #8B4513;
+      border: none;
+      color: white;
+      padding: 10px 25px;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-marron:hover {
+      background-color: #A0522D;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+ .btn-login {
+  background-color: #918e8e49 !important;
+  color: white !important;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: auto;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #c0bebe31 !important;
+}
+
+
+body {
+  background: linear-gradient(to bottom, #f5e6d3, #d9b99b);
+}
+.historia {
+  background-color: #f5f3ef;
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-historia {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.texto-historia {
+  flex: 1 1 45%;
+}
+
+.texto-historia h2 {
+  font-size: 2.5rem;
+  color: #5a3825;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.texto-historia p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4b3b2b;
+  margin-bottom: 15px;
+}
+
+.imagen-historia {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.imagen-historia img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.footer {
+  background: linear-gradient(180deg, #4e342e, #3e2723);
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer h5 {
+  color: #f4e1c1;
+  font-size: 1.4rem;
+}
+
+.footer p {
+  color: #f8f8f8;
+  line-height: 1.6;
+}
+
+.enlace-footer {
+  color: #f8f8f8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.enlace-footer:hover {
+  color: #d7b89c;
+  text-decoration: underline;
+}
+
+.redes {
+  margin-top: 15px;
+}
+
+.icono {
+  color: #f8f8f8;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.icono:hover {
+  color: #d7b89c;
+  transform: translateY(-3px);
+}
+
+.derechos {
+  background-color: rgba(0, 0, 0, 0.25);
+  font-size: 0.95rem;
+  color: #e0d6c2;
+}
+.elegirnos {
+  background-color: #f5f3ef;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  color: #5a3825;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-opinion {
+  background-color: #ffffff;
+  color: #202020;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card-opinion img {
+  border-radius: 15px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card-opinion h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-opinion p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+
+</style>
+<section class="elegirnos py-5">
+  <div class="container text-center">
+    <h2 class="titulo-seccion mb-4">¿Por qué nos eligen?</h2>
+    <p class="subtitulo-seccion mb-5">
+      Nuestros clientes disfrutan más que una taza de café:  
+      viven una experiencia llena de sabor, aroma y momentos inolvidables ☕
+    </p>
+
+    <!-- Carousel -->
+    <div id="carouselOpiniones" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4 mb-4">
+              <div class="card-opinion">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="d-block w-100" alt="Cliente feliz">
+                <h5>Atención personalizada</h5>
+                <p>Nos encanta conocer a cada cliente y preparar su café tal como le gusta. Cada visita es especial.</p>
+              </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4 mb-4">
+              <div class="card-opinion">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" class="d-block w-100" alt="Café artesanal">
+                <h5>Calidad artesanal</h5>
+                <p>Seleccionamos granos premium y los tostamos con dedicación para ofrecerte un sabor único en cada sorbo.</p>
+              </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4 mb-4">
+              <div class="card-opinion">
+                <img src="imagenes/coffe.png" class="d-block w-100" alt="Ambiente cálido">
+                <h5>Ambiente acogedor</h5>
+                <p>Un espacio cálido y tranquilo, ideal para relajarte, estudiar o disfrutar un momento contigo mismo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <!-- Tarjeta 4 -->
+            <div class="col-md-4 mb-4">
+              <div class="card-opinion">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="d-block w-100" alt="Bebidas únicas">
+                <h5>Bebidas únicas</h5>
+                <p>Innovamos constantemente con recetas especiales y sabores que no encontrarás en otro lugar.</p>
+              </div>
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="col-md-4 mb-4">
+              <div class="card-opinion">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="d-block w-100" alt="Sostenibilidad">
+                <h5>Sostenibilidad</h5>
+                <p>Apoyamos prácticas responsables con el medio ambiente y fomentamos el comercio justo en cada grano.</p>
+              </div>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="col-md-4 mb-4">
+              <div class="card-opinion">
+                <img src="https://plus.unsplash.com/premium_photo-1723568505630-2908bd3dc333?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29tdW5pZGFkJTIwY2FmZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" class="d-block w-100" alt="Comunidad">
+                <h5>Comunidad</h5>
+                <p>Creamos un espacio donde amigos y familias se reúnen y comparten momentos memorables.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselOpiniones" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselOpiniones" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer text-white">
+  <div class="container p-4">
+    <div class="row align-items-start">
+
+      <!-- Acerca de -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="fw-bold mb-3">☕ Mi Cafetería</h5>
+        <p>
+          Viví la experiencia del café artesanal.  
+          Granos seleccionados, aromas únicos y el sabor  
+          que transforma cada momento en una pausa perfecta.  
+        </p>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="fw-bold mb-3">Enlaces útiles</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="enlace-footer">Inicio</a></li>
+          <li><a href="index.html" class="enlace-footer">Menú</a></li>
+          <li><a href="Acompañamientos.html" class="enlace-footer">Acompañamientos</a></li>
+          <li><a href="nosotros.html" class="enlace-footer">Nosotros</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="fw-bold mb-3">Contáctanos</h5>
+        <p>📍 Av. Siempre Viva 123, Ciudad</p>
+        <p>📞 +54 9 1234 5678</p>
+        <p>✉️ contacto@micafeteria.com</p>
+
+        <div class="redes">
+          <a href="#" class="icono"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="icono"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="icono"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Derechos reservados -->
+  <div class="text-center p-3 derechos">
+    © 2025 <strong>Mi Cafetería</strong> - Todos los derechos reservados
+  </div>
+</footer>
+
+<!-- Iconos Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<script>
+const form = document.getElementById("loginForm");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const usuario = document.getElementById("usuario").value;
+  const password = document.getElementById("password").value;
+
+  // Usuario fake (podés cambiarlo)
+  const usuarioCorrecto = "admin";
+  const passwordCorrecta = "1234";
+
+  if (usuario === usuarioCorrecto && password === passwordCorrecta) {
+
+    // Guardamos sesión
+    localStorage.setItem("logueado", "true");
+
+    // Redirigir al inicio
+    window.location.href = "index.html";
+
+  } else {
+    alert("Usuario o contraseña incorrectos");
+  }
+});
+</script>
+
+<script>
+if (localStorage.getItem("logueado") !== "true") {
+  window.location.href = "login.html";
+}
+</script>
+<script>
+function logout() {
+  localStorage.removeItem("logueado");
+  window.location.href = "login.html";
+}
+</script>
+
+<script>
+  // 🔐 Protección
+  if (localStorage.getItem("logueado") !== "true") {
+    window.location.href = "login.html";
+  }
+
+  // 🚪 Logout
+  function logout() {
+    localStorage.removeItem("logueado");
+    window.location.href = "login.html";
+  }
+</script>
+</body>
+</html>

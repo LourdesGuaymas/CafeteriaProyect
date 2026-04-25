@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Compra confirmada</title>
+
+  <style>
+    body {
+      background-color: #f5e6d3;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      color: #3e2723;
+    }
+
+    .box {
+      background-color: white;
+      padding: 30px;
+      margin: 0 auto;
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+
+    a {
+      text-decoration: none;
+      color: #3e2723;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>✅ ¡Gracias por tu compra!</h1>
+    <p id="mensaje">Tu pedido ha sido registrado.</p>
+
+    <ul id="lista"></ul>
+    <h3 id="total"></h3>
+
+    <a href="index.html">← Volver al inicio</a>
+  </div>
+
+  <script>
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    let lista = document.getElementById("lista");
+    let total = 0;
+
+    if (carrito.length > 0) {
+      carrito.forEach(producto => {
+        let li = document.createElement("li");
+        li.textContent = producto.nombre + " - $" + producto.precio;
+        lista.appendChild(li);
+
+        total += producto.precio;
+      });
+
+      document.getElementById("total").textContent = "Total: $" + total;
+      document.getElementById("mensaje").textContent = "Compraste " + carrito.length + " producto(s) 🎉";
+
+      // Limpia el carrito después de mostrar
+      localStorage.removeItem("carrito");
+
+    } else {
+      document.getElementById("mensaje").textContent = "No hay productos en el carrito 😅";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promo seleccionada</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f6efe9;
+      color: #3e2723;
+      text-align: center;
+      padding: 50px;
+    }
+    img {
+      border-radius: 10px;
+      max-width: 300px;
+    }
+    .qr {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tu promoción</h1>
+  <img id="promo-img" src="" alt="Promo seleccionada">
+  <div class="qr">
+    <h3>Mostrá este código en caja</h3>
+    <img id="qr-img" src="" alt="QR de pago">
+  </div>
+
+  <script>
+    // Leer el parámetro de la URL (promo)
+    const params = new URLSearchParams(window.location.search);
+    const promo = params.get("promo");
+
+    // Cambiar imagen según promo seleccionada
+    const promoImg = document.getElementById("promo-img");
+    const qrImg = document.getElementById("qr-img");
+
+    // Aquí podés cambiar las imágenes según la promo
+    switch (promo) {
+      case "promo1":
+        promoImg.src = "imagenes/promo1.jpg";
+        qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Promo-${promo}";
+        break;
+      case "promo2":
+        promoImg.src = "imagenes/promo2.jpg";
+        qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Promo-${promo}";
+        break;
+      case "tostado":
+        promoImg.src = "imagenes/2x1tostado.jpg";
+        qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Promo-${promo}";
+        break;
+      case "latte":
+        promoImg.src = "imagenes/2x1latte.jpg";
+        qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Promo-${promo}";
+        break;
+      default:
+        promoImg.src = "imagenes/promo3.jpg";
+        qrImg.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Promo-${promo}";
+    }
+  </script>
+</body>
+</html>

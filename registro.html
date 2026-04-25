@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - CoffeeTime</title>
+  <style>
+     body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+       background-image: url('https://plus.unsplash.com/premium_photo-1675435646793-f6ceb239b064?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(2px);
+    }
+
+    .register-box {
+    background-color: rgba(219, 219, 219, 0.644);
+      padding: 50px 40px;
+      border-radius: 20px;
+      width: 400px;
+      text-align: center;
+      height: 79vh;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h2 {
+      color: #4b2e05;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .coffee-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #5a3e2e;
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #d1bfa7;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 95%;
+      padding: 12px;
+      background-color: #6f4e37;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #8b5e3c;
+      transform: scale(1.05);
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .login-link {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .register-box:hover {
+      box-shadow: 0 10px 30px rgba(111, 78, 55, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-box">
+    <div class="coffee-icon">☕</div>
+    <h2>Crear cuenta</h2>
+    <p>Unite a la comunidad CoffeeTime y compartí tu amor por el café</p>
+
+   
+      <input type="text" placeholder="Nombre completo" required><br>
+      <input type="email" placeholder="Correo electrónico" required><br>
+      <input type="password" placeholder="Contraseña" required><br>
+      <input type="password" placeholder="Confirmar contraseña" required><br>
+      <button type="submit" href="index.html"><a href="index.html">Registrarme</a></button>
+   
+    <div class="login-link" >
+      ¿Ya tenés cuenta? <a href="login.html"  style="color: #c7754f;">Iniciá sesión</a>
+    </div>
+  </div>
+
+</body>
+</html>
