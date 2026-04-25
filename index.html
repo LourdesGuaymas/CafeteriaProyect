@@ -150,7 +150,28 @@
   object-fit: cover;     /* Ajusta la imagen dentro del círculo */
   border: 2px solid #5a3825; /* Opcional: borde color café */
 }
+/* 📱 PROMOS RESPONSIVE */
+@media (max-width: 768px) {
 
+  #cardCarousel .carousel-item {
+    padding: 20px !important;
+  }
+
+  #cardCarousel .d-flex {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+
+  #cardCarousel .card {
+    width: 45% !important;   /* 2 por fila */
+    margin: 10px !important;
+  }
+
+  #cardCarousel .card img {
+    height: 150px !important;
+    object-fit: cover;
+  }
+}
   .ImagenHome {
   position: relative;
   width: 100%;
